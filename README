@@ -1,7 +1,7 @@
 this allows you to store your user/passwords in a mongoDB.
 it also lets you use 'django' style passwords (in the format sha1$64382$1411c1510baf7b591cde0553a44452f31f5cc0b1 )
 
-this module requires the apr-mongo-c-driver module.
+this module requires the apr-mongo-c-driver module. ( http://github.com/kryton/apr-mongo-c-driver )
 
 sample config
 
