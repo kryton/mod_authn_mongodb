@@ -1,0 +1,21 @@
+this allows you to store your user/passwords in a mongoDB.
+it also lets you use 'django' style passwords (in the format sha1$64382$1411c1510baf7b591cde0553a44452f31f5cc0b1 )
+
+this module requires the apr-mongo-c-driver module.
+
+sample config
+
+<location /css>
+    AuthType Basic
+    AuthName "Password Required"
+    AuthBasicProvider mongodb
+    AuthMongoHost 127.0.0.1
+    AuthMongoPort 27017 
+    AuthMongoCollection priv.auth_user
+    AuthMongoUserField username
+    AuthMongoPasswordField password
+    AuthMongoFormatPassword django
+    require valid-user
+</location>
+
+
